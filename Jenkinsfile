@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages { 
@@ -17,13 +16,13 @@ pipeline {
         stage('Image') { 
             steps { 
                 echo "Build To Docker!" 
-                bat 'docker build -t eureka:v1 .' 
+                bat 'docker build -t micro-zuul:v1 .' 
             } 
         }    
         stage('Run') { 
             steps { 
                 echo "Run Docker Image" 
-                bat 'docker run -d -p 9100:9100 eureka:v1' 
+                bat 'docker run -d -p 8090:8090 micro-zuul:v1' 
             } 
         }     
     }
