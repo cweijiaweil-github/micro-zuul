@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-           defaultZone: http://wjw:123456@127.0.0.1:9100/eureka
+           defaultZone: http://wjw:123456@host.docker.internal:9100/eureka
     register-with-eureka: true
     fetch-registry: true
 zuul:

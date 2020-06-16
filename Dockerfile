@@ -1,9 +1,8 @@
-FROM java:8
+FROM openjdk:8u191-jre-alpine3.9
 
 VOLUME /tmp
 
 ADD /target/micro-zuul-0.0.1-SNAPSHOT.jar micro-zuul-0.0.1-SNAPSHOT.jar
-RUN bash -c 'touch /micro-zuul-0.0.1-SNAPSHOT.jar'
 
 EXPOSE 8090
 
